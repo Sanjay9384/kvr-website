@@ -28,9 +28,8 @@ a { color: inherit; }
 /* ---------- stage layers ---------- */
 #stage, .stage-poster, .stage-dim { position: fixed; inset: 0; width: 100%; height: 100%; }
 #stage { z-index: 0; opacity: 0; transition: opacity .8s ease; }
-.stage-poster { z-index: 0; display: grid; place-items: center end; padding-right: 8vw;
-  background: radial-gradient(ellipse 60% 70% at 70% 45%, #1a2433 0%, var(--bg) 70%); }
-.stage-poster svg { width: min(46vw, 560px); opacity: .9; }
+.stage-poster { z-index: 0; background: radial-gradient(ellipse 34% 46% at 66% 58%, rgba(255, 181, 71, .14) 0%, rgba(255, 181, 71, 0) 70%),
+  radial-gradient(ellipse 60% 70% at 70% 45%, #16202c 0%, var(--bg) 70%); }
 body.stage-ready #stage { opacity: 1; }
 body.stage-failed #stage { display: none; }
 .stage-dim { z-index: 1; background: var(--bg); opacity: 0; pointer-events: none; transition: opacity .6s ease; }
@@ -72,7 +71,7 @@ body.scrolled .nav { background: rgba(11, 16, 22, .82); backdrop-filter: blur(14
 .beat--right { margin-left: auto; text-align: right; }
 .beat::before { content: ""; position: absolute; inset: 20% -8% 20% -8%; z-index: -1; pointer-events: none;
   background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(5, 8, 12, .6), rgba(5, 8, 12, 0) 75%); }
-.beat:first-child { max-width: calc(44rem + var(--gutter)); }
+.beat:first-child { max-width: calc(50rem + var(--gutter)); }
 .kicker { color: var(--accent); font-weight: 600; font-size: 15px; margin-bottom: 1.2em; display: flex; align-items: center; gap: 12px; }
 .kicker::before { content: ""; width: 34px; height: 1.5px; background: var(--accent); }
 .lead { font-size: clamp(1.05rem, 1.4vw, 1.25rem); color: #c9d3db; max-width: 32em; }
@@ -283,8 +282,6 @@ body.scrolled .nav { background: rgba(11, 16, 22, .82); backdrop-filter: blur(14
   .form { grid-template-columns: 1fr; padding: 26px; }
   .form fieldset, .form .btn, .form__sent { grid-column: auto; }
   .footer__cols { grid-template-columns: 1fr; }
-  .stage-poster { place-items: end center; padding: 0 0 8vh; }
-  .stage-poster svg { width: 80vw; }
   #explore { min-height: 120vh; }
   .hotspot span { white-space: normal; width: 150px; }
 }
